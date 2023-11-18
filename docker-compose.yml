@@ -1,0 +1,17 @@
+
+
+version: '3.8'
+
+services:
+  app:
+    image: node:14  # Using Node.js version 14
+    container_name: my_node_app  # Optional: Specify a container name
+    restart: always  # Restart policy: always restart the container if it stops for any reason
+    ports:
+      - "3000:3000"  # Map host port 3000 to container port 3000 (adjust as needed)
+    volumes:
+      - ./app:/usr/src/app  # Mount the local 'app' directory into the container
+    working_dir: /usr/src/app  # Set the working directory inside the container
+    command: npm start  # Command to start your Node.js application
+    environment:
+      NODE_ENV: production  # Set Node.js environment to 'production' (can be changed as needed)
