@@ -21,6 +21,7 @@ jobs:
         env:
           HOST: ${{ secrets.HOST_NAME }}
           USERNAME: ${{ secrets.USER }}
+          PASSWORD: ${{ secrets.PASSWORD }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSH_KEY }}
 
@@ -29,6 +30,7 @@ jobs:
         with:
           host: ${{ secrets.HOST_NAME }}
           username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_KEY }}
           script: |
